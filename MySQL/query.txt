@@ -1,0 +1,5 @@
+SELECT t.name AS Type,
+       COUNT(m.id) AS MotorcycleCount
+FROM Types t
+LEFT JOIN Motorcycles m ON t.id = m.type_id AND m.status = 1
+GROUP BY t.name;
